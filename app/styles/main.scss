@@ -9,10 +9,28 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/vendor/assets/font
   padding: 0.2em 0;
 }
 
+*,*:before,*:after {
+    -webkit-box-sizing:border-box;
+    box-sizing:border-box;
+    }
+
 .thumbnail {
   height: 200px;
 
   img.pull-right {
     width: 50px;
   }
+}
+
+.container {
+	width:100%;
+}
+
+.map {
+	border: 1px solid black;
+}
+
+
+.picture {
+	border: 1px solid black;
 }
