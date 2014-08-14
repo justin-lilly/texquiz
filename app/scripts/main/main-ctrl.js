@@ -85,10 +85,15 @@ angular.module('texquiz')
       'latitude': $scope.currentLandmark.latitude,
       'longitude': $scope.currentLandmark.longitude
     }; 
-    var distance = calculateDistance(userAnswer, data),
+    var distance = calculateDistance(window.userAnswer, data),
         score = calculateScore(distance);
     score = Math.round(score);
-    $scope.currentLandmarkIterator++;
+    if ($scope.currentLandmarkIterator < $scope.landmarks.length - 1) {
+      $scope.currentLandmarkIterator++;
+      $scope.currentLandmark = $scope.landmarks[$scope.currentLandmarkIterator];
+    } else {
+      //bring up modal
+    }
     $scope.currentScore += score;
   }
 
