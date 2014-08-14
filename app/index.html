@@ -2,7 +2,7 @@
 <html class="no-js" ng-app="texquiz">
   <head>
     <meta charset="utf-8">
-    <title>frontend</title>
+    <title>TEXQUIZ</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
@@ -22,30 +22,7 @@
 
     <div class="container" ng-controller="MainCtrl">
     
-      <nav class="navbar navbar-static-top navbar-inverse">
-        <div class="navbar-header">
-          <a class="navbar-brand" href="#">Gulp Angular</a>
-        </div>
-    
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-6">
-          <ul class="nav navbar-nav">
-            <li class="active"><a ng-href="#">Home</a></li>
-            <li><a ng-href="#">About</a></li>
-            <li><a ng-href="#">Contact</a></li>
-          </ul>
-        </div>
-      </nav>
-    
-      <div class="jumbotron text-center">
-        <h1>'Allo, 'Allo!</h1>
-        <p class="lead">
-          <img src="images/yeoman.png" alt="I'm Yeoman"><br>
-          Always a pleasure scaffolding your apps.
-        </p>
-        <p><a class="btn btn-lg btn-success" ng-href="#">Splendid!</a></p>
-      </div>
-    
-      <div class="row">
+      <!-- <div class="row">
         <div class="col-sm-6 col-md-4" ng-repeat="awesomeThing in awesomeThings | orderBy:'rank'">
           <div class="thumbnail">
             <img class="pull-right" ng-src="images/{{awesomeThing.logo}}" alt="{{awesomeThing.title}}">
@@ -56,7 +33,33 @@
             </div>
           </div>
         </div>
+      </div> -->
+
+      <div class="row">
+        <div class="col-sm-4 col-md-4">
+          <div>
+            <div class="row picture main">
+              blah
+            </div>
+            <div class="row picture thumb">
+              <div class="col-sm-6 col-md-6" ng-repeat="landmark in landmarks">
+                <div class="thumbnail">
+                  <img ng-src="images/{{location.source}}" alt="{{location.key}}">
+                </div>
+                <div class="caption">
+                  <p>{{location.description}}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-8 col-md-8">
+          <div class="map">
+            asdf
+          </div>
+        </div>
       </div>
+
     
       <hr>
     
