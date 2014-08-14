@@ -61,9 +61,9 @@ angular.module('texquiz')
         'source':'alamo.jpg'
       },
       {
-        'key':'capitol',
+        'key':'txcap',
         'description':'Capitol',
-        'source':'capitol.jpg'
+        'source':'txcap.jpg'
       },
       {
         'key':'bigtex',
@@ -93,7 +93,7 @@ angular.module('texquiz')
       {
         'key':'usslex',
         'description':'U.S.S. Lexington',
-        'source':'enchantedrock.jpg'
+        'source':'usslex.jpg'
       },
       {
         'key':'donjuan',
