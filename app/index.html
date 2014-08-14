@@ -46,10 +46,8 @@
               <img ng-src="images/{{currentLandmark.source}}" alt="{{currentLandmark.key}}">
             </div>
             <div class="row picture thumb">
-              <div class="col-sm-6 col-md-6" ng-repeat="landmark in landmarks">
-                <div class="thumbnail">
-                  <img ng-src="images/{{landmark.source}}" alt="{{landmark.key}}">
-                </div>
+              <div class="landmark cf" ng-repeat="landmark in landmarks">  
+                  <img ng-src="images/{{landmark.source}}" alt="{{landmark.key}}" class="img-thumbnail">
                 <div class="caption">
                   <p>{{landmark.description}}</p>
                 </div>

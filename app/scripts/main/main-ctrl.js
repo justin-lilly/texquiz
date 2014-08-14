@@ -47,9 +47,9 @@ angular.module('texquiz')
       'longitude': -95.080652
     },
     {
-      'key':'saturnv',
-      'description':'Saturn V',
-      'source':'saturnv.jpg',
+      'key':'stratos',
+      'description':'Stratos Capsule',
+      'source':'stratos.jpg',
       'latitude': 29.554700,
       'longitude': -95.094287
     },
@@ -98,6 +98,7 @@ angular.module('texquiz')
     $scope.currentLandmarkIterator++;
     return score;
   }
+
 
   function calculateDistance(userObject, dataObject) {
     var lat1 = userObject.latitude,
