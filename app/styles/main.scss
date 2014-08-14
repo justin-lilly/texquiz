@@ -71,5 +71,9 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/vendor/assets/font
   }
 }
 
-
-
+#map-canvas {
+        height: 100%;
+        width: 85%;
+        margin: 0px;
+        padding: 0px
+}

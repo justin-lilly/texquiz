@@ -76,17 +76,10 @@ angular.module('texquiz')
     }
   ];
 
-  // console.log($scope.landmarks[0].latitude);
+  console.log($scope.landmarks[0].latitude);
 
   $scope.currentLandmarkIterator = 0;
   $scope.currentLandmark = $scope.landmarks[$scope.currentLandmarkIterator];
-
-
-
-  // $scope.myFunction = function(message) {
-  //   console.log(message);
-  // };
-  //call with ng-click on the index.html
 
   $scope.returnScore = function() {
     data = {
@@ -108,8 +101,6 @@ angular.module('texquiz')
         distance = getDistanceFromLatLonInKm(lat1, lon1, lat2, lon2);
     return distance;
   }
-
-  
 
   function calculateScore(distanceInKm) {
     if (distanceInKm <= 32) {
@@ -141,7 +132,7 @@ angular.module('texquiz')
   }  
 
 
-    // angular.forEach($scope.landmarks, function(awesomeThing) {
-    //   awesomeThing.rank = Math.random();
-    // });
+    angular.forEach($scope.landmarks, function(awesomeThing) {
+      awesomeThing.rank = Math.random();
+    });
   });
