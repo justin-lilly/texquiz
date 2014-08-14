@@ -44,13 +44,11 @@
           <div>
             <div class="row picture main">
               <img ng-src="images/{{currentLandmark.source}}" alt="{{currentLandmark.key}}">
+              <h5>{{currentLandmark.description}}</h5>
             </div>
             <div class="row picture thumb">
               <div class="landmark cf" ng-repeat="landmark in landmarks">  
                   <img ng-src="images/{{landmark.source}}" alt="{{landmark.key}}" class="img-thumbnail">
-                <div class="caption">
-                  <p>{{landmark.description}}</p>
-                </div>
               </div>
             </div>
           </div>
@@ -66,7 +64,7 @@
       <hr>
     
       <div class="footer">
-        <p>With ♥ from <a href="https://twitter.com/Swiip">@Swiip</a></p>
+        <p>Developed by Justin Lilly, Catherine O'Neill, and Daniel Turner</p>
       </div>
     
     </div>
