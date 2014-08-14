@@ -46,20 +46,20 @@
             <div class="row">
               <div class="col-md-offset-1 col-sm-offset-1 col-sm-10 col-md-10 picture main-pic centered">
                 <img ng-src="images/{{currentLandmark.source}}" alt="{{currentLandmark.key}}">
-                <h5>{{currentLandmark.description}}</h5>
+                  <center><h3>{{currentLandmark.description}}</h3></center>
               </div>
             </div>
 
             <div class="row picture thumb">
               <div class="landmark cf" ng-repeat="landmark in landmarks">  
-                <div class="col-sm-10 col-md-10">
+                <div class="col-sm-12 col-md-12">
                   <img ng-src="images/{{landmark.source}}" alt="{{landmark.key}}" class="img-thumbnail">
                 </div>
               </div>
             </div>  
           
           <div class="row">
-            <button class = "centered">SUBMIT</button>
+            <center><button class = "submit btn btn-primary">SUBMIT</button></center>
           </div>
           <div class="row">
             <h2 class="text-center">Score: <!-- {{score}} --></h2>

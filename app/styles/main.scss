@@ -65,7 +65,8 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/vendor/assets/font
 }
 
 .main-pic{ 
-  padding-bottom: 1em;
+  margin-bottom: 1em;
+  padding: 0;
   img {
   max-width: 100%;
   }
@@ -76,4 +77,8 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/vendor/assets/font
         width: 85%;
         margin: 0px;
         padding: 0px
+}
+
+.submit {
+  margin-top: 2em;
 }
