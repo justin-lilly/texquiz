@@ -49,7 +49,7 @@ angular.module('texquiz')
     {
       'key':'stratos',
       'description':'Stratos Capsule',
-      'source':'stratos.jpg'
+      'source':'stratos.jpg',
       'latitude': 29.554700,
       'longitude': -95.094287
     },
@@ -81,13 +81,13 @@ angular.module('texquiz')
   // };
   //call with ng-click on the index.html
 
-  $scope.returnScore = function(index) {
-    data = {
-      'latitude': ,
-      'longitude':
-    }; 
-    calculateDistance(userAnswer, data)
-  }
+  // $scope.returnScore = function(index) {
+  //   data = {
+  //     'latitude': ,
+  //     'longitude':
+  //   }; 
+  //   calculateDistance(userAnswer, data)
+  // }
 
   function calculateDistance(userObject, dataObject) {
     var lat1 = userObject.latitude,
