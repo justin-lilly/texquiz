@@ -56,53 +56,53 @@ angular.module('texquiz')
 
     $scope.landmarks = [
       {
-        'key':'alamo'
-        'description':'Alamo'
+        'key':'alamo',
+        'description':'Alamo',
         'source':'alamo.jpg'
       },
       {
-        'key':'capitol'
-        'description':'Capitol'
+        'key':'capitol',
+        'description':'Capitol',
         'source':'capitol.jpg'
       },
       {
-        'key':'bigtex'
-        'description':'Big Tex'
+        'key':'bigtex',
+        'description':'Big Tex',
         'source':'bigtex.jpg'
       },
       {
-        'key':'cadillac'
-        'description':'Cadillac Ranch'
+        'key':'cadillac',
+        'description':'Cadillac Ranch',
         'source':'cadillac.jpg'
       },
       {
-        'key':'terlingua'
-        'description':'Terlingua Trading Company'
+        'key':'terlingua',
+        'description':'Terlingua Trading Company',
         'source':'terlingua.jpg'
       },
       {
-        'key':'sanjacmonument'
-        'description':'San Jacinto Monument'
+        'key':'sanjacmonument',
+        'description':'San Jacinto Monument',
         'source':'sanjacmonument.jpg'
       },
       {
-        'key':'saturnv'
-        'description':'Saturn V'
+        'key':'saturnv',
+        'description':'Saturn V',
         'source':'saturnv.jpg'
       },
       {
-        'key':'usslex'
-        'description':'U.S.S. Lexington'
+        'key':'usslex',
+        'description':'U.S.S. Lexington',
         'source':'enchantedrock.jpg'
       },
       {
-        'key':'donjuan'
-        'description':'Don Juan de Oñate Sculpture'
+        'key':'donjuan',
+        'description':'Don Juan de Oñate Sculpture',
         'source':'donjuan.jpg'
       },
       {
-        'key':'jackrabbit'
-        'description':'Odessa Jack Rabbit'
+        'key':'jackrabbit',
+        'description':'Odessa Jack Rabbit',
         'source':'jackrabbit.jpg'
       }
     ];
