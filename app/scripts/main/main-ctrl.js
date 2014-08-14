@@ -78,6 +78,7 @@ angular.module('texquiz')
 
   $scope.currentLandmarkIterator = 0;
   $scope.currentLandmark = $scope.landmarks[$scope.currentLandmarkIterator];
+  $scope.currentScore = 0;
 
   $scope.returnScore = function() {
     data = {
@@ -86,8 +87,9 @@ angular.module('texquiz')
     }; 
     var distance = calculateDistance(userAnswer, data),
         score = calculateScore(distance);
+    score = Math.round(score);
     $scope.currentLandmarkIterator++;
-    return score;
+    $scope.currentScore += score;
   }
 
 
