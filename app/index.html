@@ -40,25 +40,39 @@
   <button ng-click="myFunction(message)">Hi!</button> -->
 
       <div class="row">
+        
+        <!-- LEFT -->
         <div class="col-sm-4 col-md-4">
-          <div>
+
             <div class="row picture main">
               <img ng-src="images/{{currentLandmark.source}}" alt="{{currentLandmark.key}}">
               <h5>{{currentLandmark.description}}</h5>
             </div>
+
             <div class="row picture thumb">
               <div class="landmark cf" ng-repeat="landmark in landmarks">  
                   <img ng-src="images/{{landmark.source}}" alt="{{landmark.key}}" class="img-thumbnail">
               </div>
             </div>
-          </div>
+
+            <div class="row">
+              <button class = "centered">SUBMIT</button>
+            </div>
+
+            <div class="row">
+              <h4>Current Score:</h4>
+            </div>
+
         </div>
+
+        <!-- RIGHT -->
         <div class="col-sm-8 col-md-8">
           <div class="map">
             asdf
           </div>
         </div>
-      </div>
+
+      </div> <!-- close row -->
 
     
       <hr>
