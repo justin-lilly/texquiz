@@ -81,7 +81,7 @@ angular.module('texquiz')
   $scope.currentScore = 0;
 
   $scope.returnScore = function() {
-    data = {
+    var data = {
       'latitude': $scope.currentLandmark.latitude,
       'longitude': $scope.currentLandmark.longitude
     }; 
