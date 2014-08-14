@@ -76,8 +76,6 @@ angular.module('texquiz')
     }
   ];
 
-  console.log($scope.landmarks[0].latitude);
-
   $scope.currentLandmarkIterator = 0;
   $scope.currentLandmark = $scope.landmarks[$scope.currentLandmarkIterator];
 
