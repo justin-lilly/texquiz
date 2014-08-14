@@ -64,6 +64,13 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/vendor/assets/font
   max-height: 100px;
 }
 
+.main-pic{ 
+  padding-bottom: 1em;
+  img {
+  max-width: 100%;
+  }
+}
+
 #map-canvas {
         height: 100%;
         width: 85%;
