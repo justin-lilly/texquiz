@@ -86,9 +86,9 @@ angular.module('texquiz')
         'source':'sanjacmonument.jpg'
       },
       {
-        'key':'saturnv',
-        'description':'Saturn V',
-        'source':'saturnv.jpg'
+        'key':'stratos',
+        'description':'Stratos Capsule',
+        'source':'stratos.jpg'
       },
       {
         'key':'usslex',

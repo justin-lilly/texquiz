@@ -14,6 +14,24 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/vendor/assets/font
     box-sizing:border-box;
     }
 
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.cf:after {
+    clear: both;
+}
+
+/**
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.cf {
+    *zoom: 1;
+}
+
 .thumbnail {
   height: 200px;
 
@@ -33,4 +51,15 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/vendor/assets/font
 
 .picture {
 	border: 1px solid black;
+}
+
+.landmark{
+  display: inline-block;
+  width: 18%; 
+  float: left
+}
+
+.img-thumbnail{
+  max-width: 100px;
+  max-height: 100px;
 }
