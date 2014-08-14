@@ -1,7 +1,5 @@
 'use strict';
 
-console.log("THIS IS THE MAP JS");
-
 window.userAnswer;
 
   function initialize() {
@@ -22,7 +20,7 @@ window.userAnswer;
       mapTypeId: google.maps.MapTypeId.TERRAIN,
       styles: [ { "featureType": "administrative.locality", "stylers": [ { "visibility": "off" } ] },
                 { "featureType": "poi", "stylers": [ { "visibility": "off" } ] } ],
-      center: new google.maps.LatLng(31.701191, -99.091077)
+      center: new google.maps.LatLng(31, -99.6)
     };
     var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
     var marker;
@@ -32,8 +30,8 @@ window.userAnswer;
     });
 
     function placeMarker(location) {
-      userAnswer = { 'latitude': location.lat(),
-                        'longitude': location.lng()};
+      window.userAnswer = { 'latitude': location.lat(),
+                            'longitude': location.lng()};
       if (marker) {
         marker.setPosition(location);
       } else {
@@ -54,6 +52,4 @@ window.userAnswer;
     document.body.appendChild(script);
   }
 
-
-
-window.onload = loadScript;
+loadScript();
