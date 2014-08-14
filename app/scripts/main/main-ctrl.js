@@ -81,11 +81,6 @@ angular.module('texquiz')
   $scope.currentLandmarkIterator = 0;
   $scope.currentLandmark = $scope.landmarks[$scope.currentLandmarkIterator];
 
-  $scope.myFunction = function(message) {
-    console.log(message);
-  };
-  call with ng-click on the index.html
-
   $scope.returnScore = function() {
     data = {
       'latitude': $scope.currentLandmark.latitude,
