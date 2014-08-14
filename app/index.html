@@ -41,18 +41,24 @@
 
       <div class="row">
         <div class="col-sm-4 col-md-4">
-          <div>
-            <div class="row picture main">
-              <img ng-src="images/{{currentLandmark.source}}" alt="{{currentLandmark.key}}">
+            <div class="row">
+              <div class="col-md-offset-1 col-sm-offset-1 col-sm-10 col-md-10 picture main-pic centered">
+                <img ng-src="images/{{currentLandmark.source}}" alt="{{currentLandmark.key}}">
+              </div>
             </div>
             <div class="row picture thumb">
               <div class="landmark cf" ng-repeat="landmark in landmarks">  
+                <div class="col-sm-10 col-md-10">
                   <img ng-src="images/{{landmark.source}}" alt="{{landmark.key}}" class="img-thumbnail">
+                </div>
                 <div class="caption">
                   <p>{{landmark.description}}</p>
                 </div>
               </div>
-            </div>
+            </div>  
+          
+          <div class="row">
+            <h2 class="text-center">Score: <!-- {{score}} --></h2>
           </div>
         </div>
         <div class="col-sm-8 col-md-8">
