@@ -76,25 +76,37 @@ angular.module('texquiz')
     }
   ];
 
+  // console.log($scope.landmarks[0].latitude);
+
+  $scope.currentLandmarkIterator = 0;
+  $scope.currentLandmark = $scope.landmarks[$scope.currentLandmarkIterator];
+
+
+
   // $scope.myFunction = function(message) {
   //   console.log(message);
   // };
   //call with ng-click on the index.html
 
-  // $scope.returnScore = function(index) {
-  //   data = {
-  //     'latitude': ,
-  //     'longitude':
-  //   }; 
-  //   calculateDistance(userAnswer, data)
-  // }
+  $scope.returnScore = function() {
+    data = {
+      'latitude': $scope.currentLandmark.latitude,
+      'longitude': $scope.currentLandmark.longitude
+    }; 
+    var distance = calculateDistance(userAnswer, data),
+        score = calculateScore(distance);
+    $scope.currentLandmarkIterator++;
+    return score;
+  }
+
 
   function calculateDistance(userObject, dataObject) {
     var lat1 = userObject.latitude,
         lon1 = userObject.longitude,
         lat2 = dataObject.latitude,
-        lon2 = dataObject.longitude;
-    getDistanceFromLatLonInKm(lat1, lon1, lat2, lon2);
+        lon2 = dataObject.longitude,
+        distance = getDistanceFromLatLonInKm(lat1, lon1, lat2, lon2);
+    return distance;
   }
 
   
