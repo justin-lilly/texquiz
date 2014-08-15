@@ -124,7 +124,8 @@ angular.module('texquiz')
         $scope.currentLandmarkIterator++;
         $scope.feedback = createFeedback($scope.currentScore); 
         map.className = 'row hide';
-        finalScore.className = 'row'; 
+        finalScore.className = 'row';
+        userAnswer = null;
       }
     }
   };
