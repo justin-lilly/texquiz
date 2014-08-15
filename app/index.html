@@ -25,7 +25,7 @@
   <nav id="topbar" class="navbar navbar-default" role="navigation">
       <!-- Brand and toggle get grouped for better mobile display -->
         <center><h3>How well do you know Texas landmarks? Take the quiz!</h3></center>
-        <center><p>Click on the map where you think the landmark is located, then click "Guess" to see if you were right!</p></center>
+        <center><p>Click on the map where you think the landmark is located, then click the "Guess" button to see if you were right!</p></center>
   </nav>
 
     <div class="container" ng-controller="MainCtrl">
@@ -43,9 +43,9 @@
             </div>
           </div>
 
-          <div class="row">
-            <div class="col-md-offset-1 col-sm-offset-1 col-sm-7 col-md-7">
-              <h3 class="score">Score: {{currentScore}} of {{currentLandmarkIterator * 10}} total points</h3>
+          <div class="row score-submit-bar">
+            <div class="col-md-offset-1 col-sm-offset-1 col-sm-6 col-md-6 score-bar">
+              <h3 class="score">Score: {{currentScore}} / {{currentLandmarkIterator * 10}}</h3>
             </div>
             <button ng-click = "returnScore()" class = "col-sm-3 col-md-3 guess btn btn-primary">Guess!</button>
           </div>

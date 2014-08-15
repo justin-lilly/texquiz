@@ -20,7 +20,7 @@ window.userAnswer;
       mapTypeId: google.maps.MapTypeId.TERRAIN,
       styles: [ { "featureType": "administrative.locality", "stylers": [ { "visibility": "off" } ] },
                 { "featureType": "poi", "stylers": [ { "visibility": "off" } ] } ],
-      center: new google.maps.LatLng(31, -99.6)
+      center: new google.maps.LatLng(31.2, -100)
     };
     var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
     var marker;
