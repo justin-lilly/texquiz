@@ -54,15 +54,17 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/vendor/assets/font
   }
 }
 
-.landmark{
+.landmark {
   display: inline-block;
   width: 18%; 
-  float: left
+  float: left;
+  margin-top: .3em;
+  margin-left: .5em;
 }
 
 .img-thumbnail{
-  max-width: 5em;
-  max-height: 5em;
+  max-width: 6em;
+  max-height: 6em;
   border-radius: 1em;
   border: .05em solid white;
   opacity: 0.4;
@@ -128,6 +130,7 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/vendor/assets/font
 .score-submit-bar {
   margin-top: .1em;
   margin-bottom: .1em;
+  width: 33em;
 }
 
 body {
@@ -141,11 +144,6 @@ body {
     margin-top: 1em;
     margin-bottom: 1em;
   }
-}
-
-.landmark {
-  margin-top: 1em;
-  margin-left: .5em;
 }
 
 .thumb {
