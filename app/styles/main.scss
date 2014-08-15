@@ -36,8 +36,10 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/vendor/assets/font
 }
 
 .container {
-  margin-left: 325px;
-	width:80%;
+  margin-left: 1em;
+  margin-right: 1em;
+  padding: 0;
+	width:95%;
 }
 
 .landmark{
@@ -47,8 +49,8 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/vendor/assets/font
 }
 
 .img-thumbnail{
-  max-width: 80px;
-  max-height: 80px;
+  max-width: 6em;
+  max-height: 6em;
   border-radius: 1em;
 }
 
@@ -73,12 +75,21 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/vendor/assets/font
 }
 
 .guess {
-  margin-top: 1em;
+  margin: 0;
+  font-weight: bold;
+  font-size: 125%;
+}
+
+.score {
+  margin: 0;
 }
 
 body {
-  background-color: #7e93a6 ;
-  background-image: url(http://www.transparenttextures.com/patterns/brushed-alum.png);
+  // background-color: #7e93a6 ;
+  // background-image: url(http://www.transparenttextures.com/patterns/brushed-alum.png);
+  background-image: url("../images/mod_tex_flag.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
   color:white;
 
 }

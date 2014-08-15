@@ -25,7 +25,8 @@
   <nav class="navbar navbar-default" role="navigation">
     <div id="topbar">
       <!-- Brand and toggle get grouped for better mobile display -->
-        <center><h3>TEXAS QUIZ!!!!!!!!!</h3></center>
+        <center><h3>How well do you know Texas landmarks? Take the quiz!</h3></center>
+        <center><p>Click on the map where you think the landmark is located, then click "Guess" to see if you were right!</p></center>
     </div>
   </nav>
 
@@ -53,21 +54,21 @@
       <div class="row">
         
         <!-- LEFT -->
-        <div class="col-sm-4 col-md-4">
+        <div class="col-sm-5 col-md-5">
           <div class="row">
             <div class="col-md-offset-1 col-sm-offset-1 col-sm-10 col-md-10 picture main-pic centered">
               <img ng-src="images/{{currentLandmark.source}}" alt="{{currentLandmark.key}}">
-                <div class="col-md-8 col-sm-8 description">
-                  <h4>{{currentLandmark.description}}</h4>
+                <div class="col-md-12 col-sm-12 description">
+                  <center><h4>{{currentLandmark.description}}</h4></center>
                 </div>
             </div>
           </div>
 
           <div class="row">
             <div class="col-md-offset-1 col-sm-offset-1 col-sm-7 col-md-7">
-              <h3>Score: {{currentScore}}</h3>
+              <h3 class="score">Score: {{currentScore}}</h3>
             </div>
-            <button ng-click = "returnScore()" class = "col-sm-3 col-md-3 guess btn btn-primary">GUESS</button>
+            <button ng-click = "returnScore()" class = "col-sm-3 col-md-3 guess btn btn-primary">Guess!</button>
           </div>
 
           <div class="row picture thumb">
@@ -84,7 +85,7 @@
         </div>
 
         <!-- RIGHT -->
-        <div class="col-sm-8 col-md-8">
+        <div class="col-sm-7 col-md-7">
           <div class="row" id="map-canvas">THIS IS THE MAP DIV</div>
         </div>
       </div> <!-- close row -->
