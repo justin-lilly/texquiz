@@ -65,6 +65,7 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/vendor/assets/font
   max-height: 5em;
   border-radius: 1em;
   border: .05em solid white;
+  opacity: 0.6;
 }
 
 .main-pic{ 
@@ -144,5 +145,9 @@ body {
 
 .discription {
   text-align: center;
+}
+
+.current {
+  opacity: 1.0;
 }
 

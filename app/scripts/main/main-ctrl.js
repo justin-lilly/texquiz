@@ -75,40 +75,57 @@ angular.module('texquiz')
       'longitude': -102.374212
     }
   ];
+
+
+  //SET UP VARIABLES AT THE BEGINNING
   $scope.currentLandmarkIterator = 0;
   $scope.currentLandmark = $scope.landmarks[$scope.currentLandmarkIterator];
-  //start first calss highlighted
   $scope.currentScore = 0;
   var map = document.getElementById('map-canvas'),
       finalScore = document.getElementById('score');
 
+  $(document).ready(function() {
+    addCurrentClass();
+  });
   $scope.returnScore = function() {
     var data = {
       'latitude': $scope.currentLandmark.latitude,
       'longitude': $scope.currentLandmark.longitude
-    }; 
-    var distance = calculateDistance(window.userAnswer, data),
+    },
+        distance = calculateDistance(window.userAnswer, data),
         score = calculateScore(distance);
     score = Math.round(score);
-    console.log($scope.currentLandmarkIterator);
     $scope.currentScore += score;
+
     if ($scope.currentLandmarkIterator < $scope.landmarks.length - 1) {
-           //remove class here
+      //AFTER EACH TURN
+      removeCurrentClass();
       $scope.currentLandmarkIterator++;
       $scope.currentLandmark = $scope.landmarks[$scope.currentLandmarkIterator];
-           //add highlight class here
+      addCurrentClass();
     } else {
+      //WHEN GAME IS FINISHED
       $scope.currentLandmarkIterator++;
-
-      $scope.message = createMessage($scope.currentScore);
+      $scope.message = createMessage($scope.currentScore); 
       map.className = 'row hide';
       finalScore.className = 'row'; 
     }
   };
 
-  // function addHighlightClass
+  function addCurrentClass() {
+    //adds highlight class to the thumbnail that currently matches our main image
+    var needsCurrentClass = document.getElementById($scope.currentLandmark.key);
+    needsCurrentClass.className += ' current';
+  }
+
+  function removeCurrentClass() {
+    var hasCurrentClass = document.getElementById($scope.currentLandmark.key);
+    //hasCurrentClass.className.replace( /(?:^|\s)current(?!\S)/ , '' );
+    hasCurrentClass.className = "img-thumbnail";
+  }
 
   function createMessage(score) {
+    //message that is fed into the final score div when the game is finished
     if (score === 100) {
       return 'Excellent!  You have perfect Texas knowledge.';
     } else if (score >= 90) {
