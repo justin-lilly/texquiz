@@ -12,13 +12,8 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/vendor/assets/font
 *,*:before,*:after {
     -webkit-box-sizing:border-box;
     box-sizing:border-box;
+    font-family: 'Noticia Text', serif;
     }
-
-.cf:before,
-.cf:after {
-    content: " "; /* 1 */
-    display: table; /* 2 */
-}
 
 .cf:after {
     clear: both;
@@ -41,16 +36,8 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/vendor/assets/font
 }
 
 .container {
-	width:100%;
-}
-
-.map {
-	border: 1px solid black;
-}
-
-
-.picture {
-	border: 1px solid black;
+  margin-left: 325px;
+	width:80%;
 }
 
 .landmark{
@@ -60,26 +47,59 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/vendor/assets/font
 }
 
 .img-thumbnail{
-  max-width: 100px;
-  max-height: 100px;
+  max-width: 80px;
+  max-height: 80px;
+  border-radius: 1em;
 }
 
 .main-pic{ 
-  margin-bottom: 1em;
+  margin-bottom: 0;
   padding: 0;
   img {
-  max-width: 100%;
+    border-radius: 1em;
+    border: 5px solid white;
+    max-width: 100%;
   }
 }
 
 #map-canvas {
+  border-radius: 1em;
   height: 45.5em;
   width: 50em;
   margin: 0px;
-  padding: 0px
+  margin-left: -15px;
+  padding: 0px;
+  border: 5px solid white;
 }
 
-.submit {
-  margin-top: 2em;
+.guess {
+  margin-top: 1em;
 }
 
+body {
+  background-color: #7e93a6 ;
+  background-image: url(http://www.transparenttextures.com/patterns/brushed-alum.png);
+  color:white;
+
+}
+
+.landmark {
+  margin-top: 1em;
+  margin-left: .5em;
+}
+
+.thumb {
+  margin-left: .25em;
+}
+
+.discription {
+  text-align: center;
+}
+
+.container-nav {
+  width: 100%;
+}
+
+#topbar {
+  color:black;
+}
