@@ -5,18 +5,25 @@ angular.module('texquiz')
 
     $scope.landmarks = [
     {
-      'key':'alamo',
-      'description':'Alamo',
-      'source':'alamo.jpg',
-      'latitude': 29.426271,
-      'longitude': -98.486131
-    },
-    {
       'key':'txcap',
       'description':'Texas Capitol',
       'source':'txcap.jpg',
       'latitude': 30.274781,
       'longitude': -97.740339
+    },
+    {
+      'key':'sanjacmonument',
+      'description':'San Jacinto Monument',
+      'source':'sanjacmonument.jpg',
+      'latitude': 29.750187,
+      'longitude': -95.080652
+    },
+    {
+      'key':'chicos',
+      'description':'The Original Chico\'s Tacos',
+      'source':'chicos.jpg',
+      'latitude': 31.772473, 
+      'longitude': -106.441336
     },
     {
       'key':'bigtex',
@@ -25,12 +32,12 @@ angular.module('texquiz')
       'latitude': 32.781710,
       'longitude': -96.761715
     },
-        {
-      'key':'sanjacmonument',
-      'description':'San Jacinto Monument',
-      'source':'sanjacmonument.jpg',
-      'latitude': 29.750187,
-      'longitude': -95.080652
+    {
+      'key':'jackrabbit',
+      'description':'Odessa Jack Rabbit',
+      'source':'jackrabbit.jpg',
+      'latitude': 31.851151,
+      'longitude': -102.374212
     },
     {
       'key':'cadillac',
@@ -46,7 +53,7 @@ angular.module('texquiz')
       'latitude': 29.321297,
       'longitude': -103.616867
     },
-        {
+    {
       'key':'usslex',
       'description':'U.S.S. Lexington',
       'source':'usslex.jpg',
@@ -61,19 +68,20 @@ angular.module('texquiz')
       'longitude': -95.094287
     },
     {
-      'key':'donjuan',
-      'description':'Don Juan de Oñate Sculpture',
-      'source':'donjuan.jpg',
-      'latitude': 31.805000,
-      'longitude': -106.381063
-    },
-    {
-      'key':'jackrabbit',
-      'description':'Odessa Jack Rabbit',
-      'source':'jackrabbit.jpg',
-      'latitude': 31.851151,
-      'longitude': -102.374212
+      'key':'alamo',
+      'description':'Alamo',
+      'source':'alamo.jpg',
+      'latitude': 29.426271,
+      'longitude': -98.486131
     }
+    // {
+    //   'key':'donjuan',
+    //   'description':'Don Juan de Oñate Sculpture',
+    //   'source':'donjuan.jpg',
+    //   'latitude': 31.805000,
+    //   'longitude': -106.381063
+    // },
+
   ];
 
 
@@ -121,7 +129,7 @@ angular.module('texquiz')
   function removeCurrentClass() {
     var hasCurrentClass = document.getElementById($scope.currentLandmark.key);
     //hasCurrentClass.className.replace( /(?:^|\s)current(?!\S)/ , '' );
-    hasCurrentClass.className = "img-thumbnail";
+    hasCurrentClass.className = 'img-thumbnail';
   }
 
   function createMessage(score) {
