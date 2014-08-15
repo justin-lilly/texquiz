@@ -39,7 +39,7 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/vendor/assets/font
   margin-left: 1em;
   margin-right: 1em;
   padding: 0;
-  width:95%;
+  width:97%;
 }
 
 #topbar {
@@ -72,6 +72,7 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/vendor/assets/font
   margin-bottom: 0;
   padding: 0;
   width: 77.5%;
+  margin-left: 13.2%;
   img {
     border-radius: 1em;
     border: .3em solid white;
@@ -79,18 +80,19 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/vendor/assets/font
   }
   h4 {
     margin-top: .2em;
-    margin-bottom: .4em;
+    margin-bottom: .2em;
   }
 }
 
 #map-canvas, #score {
   border-radius: 1em;
-  height: 45.5em;
-  width: 50em;
+  height: 43em;
+  width: 45em;
   margin: 0px;
   margin-left: -15px;
   padding: 0px;
   border: .3em solid white;
+  margin-left: .1em;
 }
 
 #score {
@@ -103,10 +105,20 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/vendor/assets/font
   font-weight: bold;
   font-size: 125%;
   border: .05em solid white;
+  float: right;
 }
 
+.score-bar {
+  padding: 0;
+  margin-left: 6%;
+}
 .score {
   margin: 0;
+  margin-top: 0.25em;
+}
+.score-submit-bar {
+  margin-top: .1em;
+  margin-bottom: .1em;
 }
 
 body {
@@ -116,6 +128,10 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   color:white;
+  hr {
+    margin-top: 1em;
+    margin-bottom: 1em;
+  }
 }
 
 .landmark {
@@ -131,10 +147,7 @@ body {
   text-align: center;
 }
 
-.container-nav {
-  width: 100%;
-}
-
 .current {
   opacity: 1.0;
 }
+
