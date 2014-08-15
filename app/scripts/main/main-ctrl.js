@@ -25,6 +25,13 @@ angular.module('texquiz')
       'latitude': 32.781710,
       'longitude': -96.761715
     },
+        {
+      'key':'sanjacmonument',
+      'description':'San Jacinto Monument',
+      'source':'sanjacmonument.jpg',
+      'latitude': 29.750187,
+      'longitude': -95.080652
+    },
     {
       'key':'cadillac',
       'description':'Cadillac Ranch',
@@ -39,12 +46,12 @@ angular.module('texquiz')
       'latitude': 29.321297,
       'longitude': -103.616867
     },
-    {
-      'key':'sanjacmonument',
-      'description':'San Jacinto Monument',
-      'source':'sanjacmonument.jpg',
-      'latitude': 29.750187,
-      'longitude': -95.080652
+        {
+      'key':'usslex',
+      'description':'U.S.S. Lexington',
+      'source':'usslex.jpg',
+      'latitude': 27.815362,
+      'longitude': -97.388682
     },
     {
       'key':'stratos',
@@ -52,13 +59,6 @@ angular.module('texquiz')
       'source':'stratos.jpg',
       'latitude': 29.554700,
       'longitude': -95.094287
-    },
-    {
-      'key':'usslex',
-      'description':'U.S.S. Lexington',
-      'source':'usslex.jpg',
-      'latitude': 27.815362,
-      'longitude': -97.388682
     },
     {
       'key':'donjuan',
