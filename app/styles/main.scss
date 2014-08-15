@@ -39,7 +39,19 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/vendor/assets/font
   margin-left: 1em;
   margin-right: 1em;
   padding: 0;
-	width:95%;
+  width:95%;
+}
+
+#topbar {
+  color:black;
+  height: 3em;
+  margin-bottom: .5em;
+  h3 {
+    margin: 0;
+  }
+  p {
+    margin: 0;
+  }
 }
 
 .landmark{
@@ -49,18 +61,24 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/vendor/assets/font
 }
 
 .img-thumbnail{
-  max-width: 6em;
-  max-height: 6em;
+  max-width: 5em;
+  max-height: 5em;
   border-radius: 1em;
+  border: .05em solid white;
 }
 
 .main-pic{ 
   margin-bottom: 0;
   padding: 0;
+  width: 77.5%;
   img {
     border-radius: 1em;
-    border: 5px solid white;
+    border: .3em solid white;
     max-width: 100%;
+  }
+  h4 {
+    margin-top: .2em;
+    margin-bottom: .4em;
   }
 }
 
@@ -71,7 +89,7 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/vendor/assets/font
   margin: 0px;
   margin-left: -15px;
   padding: 0px;
-  border: 5px solid white;
+  border: .3em solid white;
 }
 
 #score {
@@ -83,6 +101,7 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/vendor/assets/font
   margin: 0;
   font-weight: bold;
   font-size: 125%;
+  border: .05em solid white;
 }
 
 .score {
@@ -96,7 +115,6 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   color:white;
-
 }
 
 .landmark {
@@ -114,8 +132,4 @@ body {
 
 .container-nav {
   width: 100%;
-}
-
-#topbar {
-  color:black;
 }
