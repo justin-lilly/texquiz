@@ -18,6 +18,15 @@
     <!-- endbuild -->
   </head>
   <body>
+<!--   FACEBOOK behind the scenes crap-->    
+    <div id="fb-root"></div>
+      <script>(function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.0";
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));</script>
     <!--[if lt IE 10]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
@@ -72,7 +81,9 @@
             <h4>{{feedback.message}}</h4>
             <img class="col-md-offset-1 col-sm-offset-1 col-sm-10 col-md-10" ng-src="images/{{feedback.image}}" alt="">
             <div class="col-md-offset-2 col-sm-offset-3 col-sm-8 col-md-8 social">
-            <div class="fb-share-button" data-href="http://localhost:3000" data-width="50"></div>
+            <div class="fb-like" data-href="http://mytexasquiz.com" data-layout="button" data-action="like" data-show-faces="true" data-share="false"></div>            
+            <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://mytexasquiz.com" data-text="How much do you know about Texas?" data-size="large" data-hashtags="TexasQuiz">Tweet</a>
+            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
             </div>
           </div>
         </div>
@@ -90,15 +101,6 @@
         </div>
       </div>
     
-    <!--BACKGROUND STUFF FOR FB BUTTON -->
-    <div id="fb-root"></div>
-    <script>(function(d, s, id) {
-      var js, fjs = d.getElementsByTagName(s)[0];
-      if (d.getElementById(id)) return;
-      js = d.createElement(s); js.id = id;
-      js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.0";
-      fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));</script>
 
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
