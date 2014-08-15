@@ -69,8 +69,11 @@
           <!-- FINAL SCORE DIV TO REPLACE MAP -->
           <div class="row hide" id="score">
             <h2>FINAL SCORE: {{currentScore}} %</h2>
-            <h4>{{message}}</h4>
+            <h4>{{feedback.message}}</h4>
+            <img class="col-md-offset-1 col-sm-offset-1 col-sm-10 col-md-10" src="images/{{feedback.image}}" alt="">
+            <div class="col-md-offset-2 col-sm-offset-3 col-sm-8 col-md-8 social">
             <div class="fb-share-button" data-href="http://localhost:3000" data-width="50"></div>
+            </div>
           </div>
         </div>
 
