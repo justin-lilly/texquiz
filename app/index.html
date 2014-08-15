@@ -5,9 +5,11 @@
     <title>TEXQUIZ</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
+
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
     <!-- build:css({.tmp,app}) styles/main.css -->
+    <link href='http://fonts.googleapis.com/css?family=Noticia+Text:400,700,700italic,400italic' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
 
@@ -43,26 +45,31 @@
         
         <!-- LEFT -->
         <div class="col-sm-4 col-md-4">
-            <div class="row">
-              <div class="col-md-offset-1 col-sm-offset-1 col-sm-10 col-md-10 picture main-pic centered">
-                <img ng-src="images/{{currentLandmark.source}}" alt="{{currentLandmark.key}}">
-                  <center><h3>{{currentLandmark.description}}</h3></center>
-              </div>
-            </div>
-
-            <div class="row picture thumb">
-              <div class="landmark cf" ng-repeat="landmark in landmarks">  
-                <div class="col-sm-12 col-md-12">
-                  <img ng-src="images/{{landmark.source}}" alt="{{landmark.key}}" class="img-thumbnail">
+          <div class="row">
+            <div class="col-md-offset-1 col-sm-offset-1 col-sm-10 col-md-10 picture main-pic centered">
+              <img ng-src="images/{{currentLandmark.source}}" alt="{{currentLandmark.key}}">
+                <div class="col-md-8 col-sm-8 description">
+                  <h4>{{currentLandmark.description}}</h4>
                 </div>
-              </div>
-            </div>  
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-offset-1 col-sm-offset-1 col-sm-7 col-md-7">
+              <h3>Score: {{currentScore}}</h3>
+            </div>
+            <button ng-click = "returnScore()" class = "col-sm-3 col-md-3 guess btn btn-primary">GUESS</button>
+          </div>
+
+          <div class="row picture thumb">
+            <div class="landmark" ng-repeat="landmark in landmarks">  
+              <!-- <div class="col-sm-12 col-md-12"> -->
+                <img ng-src="images/{{landmark.source}}" alt="{{landmark.key}}" class="img-thumbnail">
+              <!-- </div> -->
+            </div>
+          </div>  
           
           <div class="row">
-            <button ng-click = "returnScore()" class = "centered">SUBMIT</button>
-          </div>
-          <div class="row">
-            <h2 class="text-center">Score: {{currentScore}}</h2>
           </div>
           
         </div>
@@ -72,15 +79,17 @@
           <div class="row" id="map-canvas">THIS IS THE MAP DIV</div>
         </div>
       </div> <!-- close row -->
+    
+    </div>
 
     
       <hr>
     
       <div class="footer">
-        <p>Developed by Justin Lilly, Catherine O'Neill, and Daniel Turner</p>
+        <div class="container">
+          <p>Developed by Justin Lilly, Catherine O'Neill, and Daniel Turner</p>
+        </div>
       </div>
-    
-    </div>
     
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
