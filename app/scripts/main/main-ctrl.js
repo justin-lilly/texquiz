@@ -109,12 +109,12 @@ angular.module('texquiz')
   }
 
   function calculateScore(distanceInKm) {
-    if (distanceInKm <= 32) {
+    if (distanceInKm <= 16) {
       return 10;
-    } else if (distanceInKm >= 322) {
+    } else if (distanceInKm >= 161) {
       return 0;
     } else {
-      var scaled = (distanceInKm - 32)/290;
+      var scaled = (distanceInKm - 16)/145;
       return 10 - (scaled * 10);
     }
   }
