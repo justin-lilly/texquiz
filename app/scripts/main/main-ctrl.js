@@ -88,14 +88,15 @@ angular.module('texquiz')
     var distance = calculateDistance(window.userAnswer, data),
         score = calculateScore(distance);
     score = Math.round(score);
+    console.log($scope.currentLandmarkIterator);
     if ($scope.currentLandmarkIterator < $scope.landmarks.length - 1) {
       $scope.currentLandmarkIterator++;
       $scope.currentLandmark = $scope.landmarks[$scope.currentLandmarkIterator];
     } else {
-      //bring up modal
+      // $show($scope.modal);
     }
     $scope.currentScore += score;
-  }
+  };
 
 
   function calculateDistance(userObject, dataObject) {
@@ -136,8 +137,12 @@ angular.module('texquiz')
     return deg * (Math.PI/180);
   }  
 
+  // $scope.modal = {
+  //   title: 'Your Final Score',
+  //   content: 'You Won!'
+  // };
 
-    angular.forEach($scope.landmarks, function(awesomeThing) {
-      awesomeThing.rank = Math.random();
-    });
+  // var myModal = $modal({title: 'My Title', content: 'My Content', show: true});
+
+
   });
