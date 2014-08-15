@@ -75,9 +75,9 @@ angular.module('texquiz')
       'longitude': -102.374212
     }
   ];
-
   $scope.currentLandmarkIterator = 0;
   $scope.currentLandmark = $scope.landmarks[$scope.currentLandmarkIterator];
+  //start first calss highlighted
   $scope.currentScore = 0;
   var map = document.getElementById('map-canvas'),
       finalScore = document.getElementById('score');
@@ -93,14 +93,20 @@ angular.module('texquiz')
     console.log($scope.currentLandmarkIterator);
     $scope.currentScore += score;
     if ($scope.currentLandmarkIterator < $scope.landmarks.length - 1) {
+           //remove class here
       $scope.currentLandmarkIterator++;
       $scope.currentLandmark = $scope.landmarks[$scope.currentLandmarkIterator];
+           //add highlight class here
     } else {
+      $scope.currentLandmarkIterator++;
+
       $scope.message = createMessage($scope.currentScore);
       map.className = 'row hide';
       finalScore.className = 'row'; 
     }
   };
+
+  // function addHighlightClass
 
   function createMessage(score) {
     if (score === 100) {

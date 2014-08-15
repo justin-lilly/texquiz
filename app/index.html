@@ -31,25 +31,6 @@
   </nav>
 
     <div class="container" ng-controller="MainCtrl">
-    
-      <!-- <div class="row">
-        <div class="col-sm-6 col-md-4" ng-repeat="awesomeThing in awesomeThings | orderBy:'rank'">
-          <div class="thumbnail">
-            <img class="pull-right" ng-src="images/{{awesomeThing.logo}}" alt="{{awesomeThing.title}}">
-            <div class="caption">
-              <h3>{{awesomeThing.title}}</h3>
-              <p>{{awesomeThing.description}}</p>
-              <p><a ng-href="{{awesomeThing.url}}">{{awesomeThing.url}}</a></p>
-            </div>
-          </div>
-        </div>
-      </div> -->
-  
-<!-- EXAMPLE OF ANGULAR BUTTON
-  <input type="text" ng-model="message">
-  <button ng-click="myFunction(message)">Hi!</button> -->
-
-
 
       <div class="row">
         
@@ -74,7 +55,7 @@
           <div class="row picture thumb">
             <div class="landmark" ng-repeat="landmark in landmarks">  
               <!-- <div class="col-sm-12 col-md-12"> -->
-                <img ng-src="images/{{landmark.source}}" alt="{{landmark.key}}" class="img-thumbnail">
+                <img ng-src="images/{{landmark.source}}" alt="{{landmark.key}}" id ="{{landmark.key}}" class="img-thumbnail">
               <!-- </div> -->
             </div>
           </div>  
@@ -95,7 +76,6 @@
             <div class="fb-share-button" data-href="http://localhost:3000" data-width="50"></div>
           </div>
         </div>
-
 
 
       </div> <!-- close row -->
