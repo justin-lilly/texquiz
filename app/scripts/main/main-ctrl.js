@@ -79,6 +79,8 @@ angular.module('texquiz')
   $scope.currentLandmarkIterator = 0;
   $scope.currentLandmark = $scope.landmarks[$scope.currentLandmarkIterator];
   $scope.currentScore = 0;
+  var map = document.getElementById('map-canvas'),
+      finalScore = document.getElementById('score');
 
   $scope.returnScore = function() {
     var data = {
@@ -93,7 +95,9 @@ angular.module('texquiz')
       $scope.currentLandmarkIterator++;
       $scope.currentLandmark = $scope.landmarks[$scope.currentLandmarkIterator];
     } else {
-      // $show($scope.modal);
+      map.className = "row hide";
+      finalScore.className = "row";
+      // $scope.message = 
     }
     $scope.currentScore += score;
   };
