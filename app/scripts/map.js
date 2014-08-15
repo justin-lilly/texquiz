@@ -1,6 +1,7 @@
 'use strict';
 
 window.userAnswer;
+window.turnActive;
 
   function initialize() {
     var mapOptions = {
@@ -18,8 +19,8 @@ window.userAnswer;
       draggable: false,
       keyboardShortcuts: false,
       mapTypeId: google.maps.MapTypeId.TERRAIN,
-      styles: [ { "featureType": "administrative.locality", "stylers": [ { "visibility": "off" } ] },
-                { "featureType": "poi", "stylers": [ { "visibility": "off" } ] } ],
+      styles: [ { 'featureType': 'administrative.locality', 'stylers': [ { 'visibility': 'off' } ] },
+                { 'featureType': 'poi', 'stylers': [ { 'visibility': 'off' } ] } ],
       center: new google.maps.LatLng(31.2, -100)
     };
     var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
@@ -27,7 +28,14 @@ window.userAnswer;
 
     google.maps.event.addListener(map, 'click', function(event) {
       placeMarker(event.latLng);
+      window.turnActive = true;
     });
+
+    // google.maps.event.addDomListener(window.turnActive, false, function() {
+    //   marker.setMap(null);
+    //   marker = null;
+    // });
+
 
     function placeMarker(location) {
       window.userAnswer = { 'latitude': location.lat(),
@@ -42,6 +50,10 @@ window.userAnswer;
         });
       }
     }
+
+    // function removeMarker() {
+    //   marker.setMap(null);
+    // }
   }
 
   function loadScript() {

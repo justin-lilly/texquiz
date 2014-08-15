@@ -100,8 +100,8 @@ angular.module('texquiz')
       'latitude': $scope.currentLandmark.latitude,
       'longitude': $scope.currentLandmark.longitude
     },
-        distance = calculateDistance(window.userAnswer, data),
-        score = calculateScore(distance);
+    distance = calculateDistance(window.userAnswer, data),
+    score = calculateScore(distance);
     score = Math.round(score);
     $scope.currentScore += score;
 
@@ -111,6 +111,7 @@ angular.module('texquiz')
       $scope.currentLandmarkIterator++;
       $scope.currentLandmark = $scope.landmarks[$scope.currentLandmarkIterator];
       addCurrentClass();
+      window.turnActive = false;
     } else {
       //WHEN GAME IS FINISHED
       $scope.currentLandmarkIterator++;
