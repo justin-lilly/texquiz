@@ -96,29 +96,36 @@ angular.module('texquiz')
   $(document).ready(function() {
     addCurrentClass();
   });
+
   $scope.returnScore = function() {
-    var data = {
+    if (userAnswer === null) {
+      return false;
+    } else { 
+      var data = {
       'latitude': $scope.currentLandmark.latitude,
       'longitude': $scope.currentLandmark.longitude
-    },
-    distance = calculateDistance(window.userAnswer, data),
-    score = calculateScore(distance);
-    score = Math.round(score);
-    $scope.currentScore += score;
+      },
+      distance = calculateDistance(userAnswer, data),
+      score = calculateScore(distance);
+      score = Math.round(score);
+      $scope.currentScore += score;
 
-    if ($scope.currentLandmarkIterator < $scope.landmarks.length - 1) {
-      //AFTER EACH TURN
-      removeCurrentClass();
-      $scope.currentLandmarkIterator++;
-      $scope.currentLandmark = $scope.landmarks[$scope.currentLandmarkIterator];
-      addCurrentClass();
-      window.turnActive = false;
-    } else {
-      //WHEN GAME IS FINISHED
-      $scope.currentLandmarkIterator++;
-      $scope.feedback = createFeedback($scope.currentScore); 
-      map.className = 'row hide';
-      finalScore.className = 'row'; 
+      if ($scope.currentLandmarkIterator < $scope.landmarks.length - 1) {
+        //AFTER EACH TURN
+        removeCurrentClass();
+        $scope.currentLandmarkIterator++;
+        $scope.currentLandmark = $scope.landmarks[$scope.currentLandmarkIterator];
+        addCurrentClass();
+        marker.setMap(null);
+        marker = null;
+        userAnswer = null;
+      } else {
+        //WHEN GAME IS FINISHED
+        $scope.currentLandmarkIterator++;
+        $scope.feedback = createFeedback($scope.currentScore); 
+        map.className = 'row hide';
+        finalScore.className = 'row'; 
+      }
     }
   };
 
@@ -146,7 +153,7 @@ angular.module('texquiz')
       return {message: 'You\'ve got a good foundation of knowledge, but get out there and see more of Texas.  Hit the big cities and look for the gems hidden between them.',
               image: 'riverroad.jpg'};
     } else if (score >= 50) {
-      return {message: 'You\'ve learned some things about Texas, but you\'re really missing out on some of the good stuff.  Dig into the history and check out more of this great state.',
+      return {message: 'You\'ve learned some things about Texas, but you\'re missing out on some of the really good stuff.  Dig into the history and check out more of this great state.',
               image: 'historicmap.jpg'};
     } else if (score < 50) {
       return {message: 'Are you from California?  It\'s time for you to learn more about the great state of Texas!  Add the following words to your vocabulary: armadillo, bar-b-que, bluebonnet, Longhorn, mockingbird, prickly pear, and Tex-Mex.',
