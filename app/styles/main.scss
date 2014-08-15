@@ -64,7 +64,7 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/vendor/assets/font
   }
 }
 
-#map-canvas {
+#map-canvas, #score {
   border-radius: 1em;
   height: 45.5em;
   width: 50em;
@@ -72,6 +72,11 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/vendor/assets/font
   margin-left: -15px;
   padding: 0px;
   border: 5px solid white;
+}
+
+#score {
+  background-color: gray;
+  padding: 2em;
 }
 
 .guess {

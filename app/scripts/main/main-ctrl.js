@@ -91,17 +91,32 @@ angular.module('texquiz')
         score = calculateScore(distance);
     score = Math.round(score);
     console.log($scope.currentLandmarkIterator);
+    $scope.currentScore += score;
     if ($scope.currentLandmarkIterator < $scope.landmarks.length - 1) {
       $scope.currentLandmarkIterator++;
       $scope.currentLandmark = $scope.landmarks[$scope.currentLandmarkIterator];
     } else {
-      map.className = "row hide";
-      finalScore.className = "row";
-      // $scope.message = 
+      $scope.message = createMessage($scope.currentScore);
+      map.className = 'row hide';
+      finalScore.className = 'row'; 
     }
-    $scope.currentScore += score;
   };
 
+  function createMessage(score) {
+    if (score === 100) {
+      return 'Excellent!  You have perfect Texas knowledge.';
+    } else if (score >= 90) {
+      return 'Congratulations!  You have a high level of Texas knowledge!';
+    } else if (score >= 80) {
+      return 'Great Job!  You know more about Texas than most people.';
+    } else if (score >= 70) {
+      return 'You\'ve got a good foundation of knowledge, but get out there and see more of Texas.';
+    } else if (score >= 50) {
+      return 'You\'ve learned some things about Texas, but you\'re really missing out on some of the good stuff.';
+    } else if (score < 50) {
+      return 'Are you from California?  It\'s time for you to learn more about the great state of Texas!';
+    }
+  }
 
   function calculateDistance(userObject, dataObject) {
     var lat1 = userObject.latitude,
