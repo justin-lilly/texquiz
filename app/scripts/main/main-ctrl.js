@@ -89,6 +89,7 @@ angular.module('texquiz')
   $scope.currentLandmarkIterator = 0;
   $scope.currentLandmark = $scope.landmarks[$scope.currentLandmarkIterator];
   $scope.currentScore = 0;
+  $scope.feedback = {message: '', image: 'white.jpg'};
   var map = document.getElementById('map-canvas'),
       finalScore = document.getElementById('score');
 
@@ -148,7 +149,7 @@ angular.module('texquiz')
       return {message: 'You\'ve learned some things about Texas, but you\'re really missing out on some of the good stuff.  Dig into the history and check out more of this great state.',
               image: 'historicmap.jpg'};
     } else if (score < 50) {
-      return {message: 'Are you from California?  It\'s time for you to learn more about the great state of Texas!  Add the following words to your vocabulary: armadillo, bar-b-que, bluebonnet, longhorn, mockingbird, prickly pear, and Tex-Mex',
+      return {message: 'Are you from California?  It\'s time for you to learn more about the great state of Texas!  Add the following words to your vocabulary: armadillo, bar-b-que, bluebonnet, Longhorn, mockingbird, prickly pear, and Tex-Mex.',
               image: 'california.jpg'};
     }
   }
