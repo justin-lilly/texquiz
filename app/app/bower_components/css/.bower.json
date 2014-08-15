@@ -1,0 +1,11 @@
+{
+  "name": "css",
+  "_cacheHeaders": {
+    "Content-Type": "text/css"
+  },
+  "main": "index",
+  "_source": "http://fonts.googleapis.com/css?family=Noticia+Text:400,700,700italic,400italic",
+  "_target": "*",
+  "_originalSource": "http://fonts.googleapis.com/css?family=Noticia+Text:400,700,700italic,400italic",
+  "_direct": true
+}
