@@ -79,6 +79,8 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/vendor/assets/font
 body {
   background-color: #7e93a6 ;
   background-image: url(http://www.transparenttextures.com/patterns/brushed-alum.png);
+  color:white;
+
 }
 
 .landmark {
@@ -87,9 +89,17 @@ body {
 }
 
 .thumb {
-  margin-left: 30px;
+  margin-left: .25em;
 }
 
 .discription {
   text-align: center;
+}
+
+.container-nav {
+  width: 100%;
+}
+
+#topbar {
+  color:black;
 }
