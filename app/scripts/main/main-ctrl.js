@@ -115,7 +115,7 @@ angular.module('texquiz')
     } else {
       //WHEN GAME IS FINISHED
       $scope.currentLandmarkIterator++;
-      $scope.message = createMessage($scope.currentScore); 
+      $scope.feedback = createFeedback($scope.currentScore); 
       map.className = 'row hide';
       finalScore.className = 'row'; 
     }
@@ -133,20 +133,23 @@ angular.module('texquiz')
     hasCurrentClass.className = 'img-thumbnail';
   }
 
-  function createMessage(score) {
+  function createFeedback(score) {
     //message that is fed into the final score div when the game is finished
-    if (score === 100) {
-      return 'Excellent!  You have perfect Texas knowledge.';
-    } else if (score >= 90) {
-      return 'Congratulations!  You have a high level of Texas knowledge!';
+    if (score >= 90) {
+      return {message: 'Congratulations!  You have a high level of Texas knowledge!  If you\'re not a native Texan, people probably assume you are!  When are you getting your Texas tattoo?',
+              image: 'car2go-cowboy.jpg'};
     } else if (score >= 80) {
-      return 'Great Job!  You know more about Texas than most people.';
+      return {message: 'Great Job!  You know more about Texas than most people.  You\'ve seen a lot of the state and explored the cities and the rural areas in between.',
+              image: 'skyline-bluebonnets.jpg'};
     } else if (score >= 70) {
-      return 'You\'ve got a good foundation of knowledge, but get out there and see more of Texas.';
+      return {message: 'You\'ve got a good foundation of knowledge, but get out there and see more of Texas.  Hit the big cities and look for the gems hidden between them.',
+              image: 'riverroad.jpg'};
     } else if (score >= 50) {
-      return 'You\'ve learned some things about Texas, but you\'re really missing out on some of the good stuff.';
+      return {message: 'You\'ve learned some things about Texas, but you\'re really missing out on some of the good stuff.  Dig into the history and check out more of this great state.',
+              image: 'historicmap.jpg'};
     } else if (score < 50) {
-      return 'Are you from California?  It\'s time for you to learn more about the great state of Texas!';
+      return {message: 'Are you from California?  It\'s time for you to learn more about the great state of Texas!  Add the following words to your vocabulary: armadillo, bar-b-que, bluebonnet, longhorn, mockingbird, prickly pear, and Tex-Mex',
+              image: 'california.jpg'};
     }
   }
 

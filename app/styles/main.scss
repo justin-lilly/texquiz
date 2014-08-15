@@ -96,8 +96,17 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/vendor/assets/font
 }
 
 #score {
-  background-color: gray;
-  padding: 2em;
+  background-color: #1f4f61;
+  background-image: url(http://www.transparenttextures.com/patterns/egg-shell.png);
+  padding: 0 2em 2em 2em;
+}
+
+.social {
+  background-color: white;
+  border-radius: 1em;
+  margin-top: 2em;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
 }
 
 .guess {
