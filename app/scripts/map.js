@@ -20,6 +20,7 @@ function initialize() {
     keyboardShortcuts: false,
     mapTypeId: google.maps.MapTypeId.TERRAIN,
     styles: [ { 'featureType': 'administrative.locality', 'stylers': [ { 'visibility': 'off' } ] },
+              { 'featureType': 'administrative.neighborhood', 'stylers': [ { 'visibility': 'off' } ] },
               { 'featureType': 'poi', 'stylers': [ { 'visibility': 'off' } ] } ],
     center: new google.maps.LatLng(31.2, -100)
   };
